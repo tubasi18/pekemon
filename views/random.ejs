@@ -1,0 +1,50 @@
+<div id="wrapper">
+    <h1>Random Pokemon</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Order</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% for( let index=0; index < pokemon.length; index++ ) { %>
+                <tr>
+                    <td>
+                        <%= index+1 %>
+                    </td>
+                    <td>
+                        <%= pokemon[index].name %>
+                    </td>
+                    <td>
+                        <%= pokemon[index].order %>
+                    </td>
+                </tr>
+                <% } %>
+    </table>
+</div>
+
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 5px;
+    }
+
+    #wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
